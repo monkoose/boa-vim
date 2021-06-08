@@ -491,7 +491,7 @@ hi! link svelteKeyword BoaPurple
 
 hi StatusLineTerm guifg=#8f9e44 guibg=#0a0707 gui=bold cterm=NONE ctermfg=NONE ctermbg=NONE
 hi StatusLineTermNC guifg=#5f6e24 guibg=#0a0707 gui=NONE cterm=NONE ctermfg=NONE ctermbg=NONE
-hi Terminal guifg=#b8af96 guibg=#1f1a17
+hi Terminal guifg=#b8af96 guibg=#1d1f17
 let g:terminal_ansi_colors = [
       \ '#1f1a17',
       \ '#d35b4b',
