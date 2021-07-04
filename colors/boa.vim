@@ -195,7 +195,7 @@ hi SpellCap guisp=#a0b82e cterm=underline
 hi link SpellLocal SpellCap
 hi link SpellRare SpellCap
 hi StatusLine guifg=#797065 guibg=#0a0707
-hi StatusLineNC guifg=#403832 guibg=#0a0707
+hi StatusLineNC guifg=#493c36 guibg=#0a0707
 hi StatusLineTerm guifg=#8f9e44 guibg=#0a0707 cterm=bold
 hi StatusLineTermNC guifg=#5f6e24 guibg=#0a0707
 hi TabLine guifg=#7c6f64 guibg=#0a0707
@@ -210,7 +210,7 @@ hi WildMenu guifg=#919697 guibg=#3d3834 cterm=bold
 
 hi User1 guifg=#628c4c guibg=#0a0707
 hi User2 guifg=#70655c guibg=#0a0707 guisp=#e62922 cterm=underline
-hi User3 guifg=#998539 guibg=#0a0707
+hi User3 guifg=#a59543 guibg=#0a0707
 hi User4 guifg=#466d87 guibg=#0a0707
 hi User5 guifg=#87517f guibg=#0a0707
 hi User6 guifg=#964b44 guibg=#0a0707
