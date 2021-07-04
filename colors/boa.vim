@@ -150,7 +150,7 @@ hi link Delimiter Special
 hi link SpecialComment Special
 hi link Debug Special
 hi Underlined guifg=#919697 cterm=underline
-hi Ignore guifg=NONE
+hi Ignore guifg=#3c322d
 hi Error guifg=#d35b4b cterm=bold,underline
 hi Todo guifg=fg cterm=bold,underline
 
@@ -194,7 +194,7 @@ hi SpellBad guisp=#e62922 cterm=underline
 hi SpellCap guisp=#a0b82e cterm=underline
 hi link SpellLocal SpellCap
 hi link SpellRare SpellCap
-hi StatusLine guifg=#70655c guibg=#0a0707
+hi StatusLine guifg=#797065 guibg=#0a0707
 hi StatusLineNC guifg=#403832 guibg=#0a0707
 hi StatusLineTerm guifg=#8f9e44 guibg=#0a0707 cterm=bold
 hi StatusLineTermNC guifg=#5f6e24 guibg=#0a0707
@@ -214,6 +214,7 @@ hi User3 guifg=#998539 guibg=#0a0707
 hi User4 guifg=#466d87 guibg=#0a0707
 hi User5 guifg=#87517f guibg=#0a0707
 hi User6 guifg=#964b44 guibg=#0a0707
+hi User7 guifg=#ca4141 guibg=#0a0707 cterm=bold
 
 hi link qfLineNr BoaOrange
 " qfError
