@@ -1,14 +1,8 @@
 " Initialisation: {{{
 
-if exists("g:boa_colors")
-  finish
-endif
-let g:boa_colors = 1
 set background=dark
 highlight clear
-if exists("syntax_on")
-  syntax reset
-endif
+syntax reset
 let g:colors_name ='boa'
 
 " }}}
