@@ -274,6 +274,11 @@ hi link GitGutterDelete BoaRed
 hi link GitGutterChangeDelete BoaAqua
 
 " }}}
+" TermDebug: {{{
+hi debugPC guibg=#0f1317
+hi debugBreakpoint guifg=#d35b4b cterm=reverse,bold
+
+" }}}
 
 " Filetype specific -----------------------------------------------------------
 " Diff: {{{
