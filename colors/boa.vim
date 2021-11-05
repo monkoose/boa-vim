@@ -516,10 +516,10 @@ hi link markdownIdDeclaration markdownLinkText
 " Haskell: {{{
 
 hi link haskellType BoaYellow
-hi link haskellIdentifier Normal
+hi link haskellIdentifier BoaDarkBlue
 hi link haskellSeparator Normal
 hi link haskellDelimiter Normal
-hi link haskellOperators BoaDarkBlue
+hi link haskellOperators BoaRed
 hi link haskellBacktick BoaOrange
 hi link haskellStatement BoaOrange
 hi link haskellConditional BoaOrange
