@@ -167,10 +167,10 @@ hi VertSplit guifg=#0a0707
 hi Folded guifg=#817466 guibg=#2b2927
 hi link FoldColumn Folded
 hi IncSearch guifg=#4780f1 cterm=bold,underline
-hi LineNr guifg=#caa247 guibg=#292523
+hi LineNr guifg=#caa247
 hi link LineNrAbove NonText
 hi link LineNrBelow LineNrAbove
-hi link CursorLineNr LineNr
+hi CursorLineNr guifg=#caa247 guibg=#292523
 hi MatchParen guifg=#eb3a75 cterm=bold
 hi ModeMsg guifg=#93b329 cterm=bold
 hi MoreMsg guifg=#caa247 cterm=bold
@@ -218,31 +218,9 @@ hi HighlightedyankRegion guibg=#363D45
 " }}}
 
 " Plugin specific -------------------------------------------------------------
-" EasyMotion: {{{
-
-" hi! link EasyMotionTarget Search
-hi EasyMotionTarget guifg=#e04c38 cterm=bold
-hi! link EasyMotionTarget2First EasyMotionTarget
-hi EasyMotionTarget2Second guifg=#9eb339 cterm=bold
-hi! link EasyMotionShade Comment
-
-" }}}
-" Netrw: {{{
-
-hi! link netrwDir BoaAqua
-hi! link netrwClassify BoaAqua
-hi! link netrwLink BoaGray
-hi! link netrwSymLink Normal
-hi! link netrwExe BoaYellow
-hi! link netrwComment BoaGray
-hi! link netrwList BoaBlue
-hi! link netrwHelpCmd BoaAqua
-hi! link netrwCmdSep Normal
-hi! link netrwVersion BoaGreen
-
-" }}}
 " Coc: {{{
 
+hi link CocMenuSel CursorLine
 hi link CocErrorSign BoaRed
 hi link CocWarningSign BoaYellow
 hi link CocInfoSign BoaGreen
