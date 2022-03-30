@@ -15,7 +15,7 @@ const colors = {
     purple: '#b2809f',
     aqua: '#70a17c',
     orange: '#c57c41',
-    gray: '#817466',
+    gray: '#80684f',
     brown: '#826a33',
     cursorlinebg: '#292523',
     black: '#0a0707',
@@ -324,7 +324,7 @@ HlSet('Ignore', '#3c322d')
 HlSet('Error', colors.red, v:none, bold_underline)
 HlSet('Todo', 'fg', v:none, bold_underline)
 
-HlSet('CursorLine', colors.cursorlinebg)
+HlSet('CursorLine', v:none, colors.cursorlinebg)
 HlLinks(['ColorColumn', 'CursorColumn', 'CocMenuSel'], 'CursorLine')
 
 HlSet('Cursor', v:none, v:none, { inverse: 1 })
