@@ -6,42 +6,42 @@ syntax reset
 g:colors_name = 'boa'
 
 const colors = {
-    red: '#d35b4b',
-    redish: '#e62922',
-    green: '#8f9e44',
-    yellow: '#caa247',
-    blue: '#919697',
-    darkblue: '#898fac',
-    purple: '#b2809f',
-    aqua: '#70a17c',
-    orange: '#c57c41',
-    gray: '#80684f',
-    brown: '#826a33',
-    cursorlinebg: '#292523',
-    black: '#0a0707',
-    normal: '#b8af96',
-    visual: '#3d3834',
-    graish: '#7c6f64',
-    bright: '#a89984',
+  red: '#d35b4b',
+  redish: '#e62922',
+  green: '#8f9e44',
+  yellow: '#caa247',
+  blue: '#919697',
+  darkblue: '#898fac',
+  purple: '#b2809f',
+  aqua: '#70a17c',
+  orange: '#c57c41',
+  gray: '#80684f',
+  brown: '#826a33',
+  cursorlinebg: '#292523',
+  black: '#0a0707',
+  normal: '#b8af96',
+  visual: '#3d3834',
+  graish: '#7c6f64',
+  bright: '#a89984',
 }
 
 g:terminal_ansi_colors = [
-    '#1f1a17',
-    colors.red,
-    colors.green,
-    colors.orange,
-    '#7680ac',
-    colors.purple,
-    '#70a195',
-    '#8c8572',
-    '#6e685a',
-    colors.red,
-    colors.green,
-    colors.yellow,
-    '#7680ac',
-    colors.purple,
-    '#70a195',
-    colors.normal
+  '#1f1a17',
+  colors.red,
+  colors.green,
+  colors.orange,
+  '#7680ac',
+  colors.purple,
+  '#70a195',
+  '#8c8572',
+  '#6e685a',
+  colors.red,
+  colors.green,
+  colors.yellow,
+  '#7680ac',
+  colors.purple,
+  '#70a195',
+  colors.normal
 ]
 
 const bold = { bold: 1 }
@@ -50,41 +50,40 @@ const underline = { underline: 1 }
 const bold_underline = { bold: 1, underline: 1 }
 
 def HlSet(name: string, fg = 'NONE', bg = 'NONE', attr = {}, attr_color = 'NONE')
-    hlset([{ name: name, guifg: fg, guibg: bg, cterm: attr, guisp: attr_color,
-             ctermfg: 'NONE', ctermbg: 'NONE', ctermul: 'NONE',
-             gui: {}, start: 'NONE', stop: 'NONE', term: {} }])
+  hlset([{ name: name, guifg: fg, guibg: bg, cterm: attr, guisp: attr_color,
+           ctermfg: 'NONE', ctermbg: 'NONE', ctermul: 'NONE',
+           gui: {}, start: 'NONE', stop: 'NONE', term: {} }])
 enddef
 
 def HlLinks(names: list<string>, linksto: string)
-    var links = []
-    for name in names
-        add(links, { name: name, linksto: linksto, force: v:true })
-    endfor
-    hlset(links)
+  var links = []
+  for name in names
+    add(links, { name: name, linksto: linksto, force: v:true })
+  endfor
+  hlset(links)
 enddef
 
 # :help group-name
 # :help highlight-default
 HlSet('Comment', colors.gray)
-HlLinks(
-    [
-        'xmlDocTypeDecl',
-        'xmlCdataStart',
-        'dtdFunction',
-        'xmlProcessingDelim',
-        'dtdParamEntityPunct',
-        'dtdParamEntityDPunct',
-        'xmlAttribPunct',
-        'markdownBlockquote',
-        'markdownListMarker',
-        'markdownOrderedListMarker',
-        'markdownRule',
-        'markdownHeadingRule',
-        'typeScriptDocSeeTag',
-        'typeScriptDocParam',
-    ],
+HlLinks([
+  'xmlDocTypeDecl',
+  'xmlCdataStart',
+  'dtdFunction',
+  'xmlProcessingDelim',
+  'dtdParamEntityPunct',
+  'dtdParamEntityDPunct',
+  'xmlAttribPunct',
+  'markdownBlockquote',
+  'markdownListMarker',
+  'markdownOrderedListMarker',
+  'markdownRule',
+  'markdownHeadingRule',
+  'typeScriptDocSeeTag',
+  'typeScriptDocParam',
+],
     'Comment'
-)
+    )
 
 HlSet('Constant', colors.purple)
 HlLinks(
@@ -358,7 +357,7 @@ HlLinks(
 HlSet('ErrorMsg', colors.red, v:none, bold)
 HlLinks(['CocGitRemovedSign', 'CocGitTopRemovedSign'], 'ErrorMsg')
 
-HlSet('VertSplit', colors.black)
+HlSet('VertSplit', v:none, colors.black)
 HlSet('Folded', colors.gray, '#2b2927')
 HlLinks(['FoldColumn'], 'Folded')
 HlSet('IncSearch', '#4780f1', v:none, bold_underline)
