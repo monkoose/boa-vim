@@ -23,6 +23,7 @@ const colors = {
   visual: '#3d3834',
   graish: '#7c6f64',
   bright: '#a89984',
+  norm_back: '#110e0d',
 }
 
 g:terminal_ansi_colors = [
@@ -375,7 +376,7 @@ HlLinks(
     'MoreMsg'
 )
 
-HlSet('Normal', colors.normal)
+HlSet('Normal', colors.normal, colors.norm_back)
 HlLinks(
     [
         'CocOutlineName',
