@@ -6,24 +6,24 @@ syntax reset
 g:colors_name = 'boa'
 
 const colors = {
-  red: '#d35b4b',
-  redish: '#e62922',
-  green: '#8f9e44',
-  yellow: '#caa247',
-  blue: '#919697',
-  darkblue: '#898fac',
-  purple: '#b2809f',
-  aqua: '#70a17c',
-  orange: '#c57c41',
-  gray: '#80684f',
-  brown: '#826a33',
-  cursorlinebg: '#292523',
-  black: '#0a0707',
-  normal: '#b8af96',
-  visual: '#3d3834',
-  graish: '#7c6f64',
-  bright: '#a89984',
-  norm_back: '#110e0d',
+  red: ['#d35b4b'],
+  redish: ['#e62922'],
+  green: ['#8f9e44'],
+  yellow: ['#caa247'],
+  blue: ['#919697'],
+  darkblue: ['#898fac'],
+  purple: ['#b2809f'],
+  aqua: ['#70a17c'],
+  orange: ['#c57c41'],
+  gray: ['#80684f'],
+  brown: ['#826a33'],
+  cursorlinebg: ['#292523'],
+  black: ['#0a0707'],
+  normal: ['#b8af96'],
+  visual: ['#3d3834'],
+  graish: ['#7c6f64'],
+  bright: ['#a89984'],
+  norm_back: ['#110e0d'],
 }
 
 g:terminal_ansi_colors = [
@@ -50,8 +50,8 @@ const italic = { italic: 1 }
 const underline = { underline: 1 }
 const bold_underline = { bold: 1, underline: 1 }
 
-def HlSet(name: string, fg = 'NONE', bg = 'NONE', attr = {}, attr_color = 'NONE')
-  hlset([{ name: name, guifg: fg, guibg: bg, cterm: attr, guisp: attr_color,
+def HlSet(name: string, fg = ['NONE'], bg = ['NONE'], attr = {}, attr_color = ['NONE'])
+  hlset([{ name: name, guifg: fg[0], guibg: bg[0], cterm: attr, guisp: attr_color[0],
            ctermfg: 'NONE', ctermbg: 'NONE', ctermul: 'NONE',
            gui: {}, start: 'NONE', stop: 'NONE', term: {} }])
 enddef
@@ -320,9 +320,9 @@ HlLinks(
 )
 
 HlSet('Underlined', colors.blue, v:none, underline)
-HlSet('Ignore', '#3c322d')
+HlSet('Ignore', ['#3c322d'])
 HlSet('Error', colors.red, v:none, bold_underline)
-HlSet('Todo', 'fg', v:none, bold_underline)
+HlSet('Todo', ['fg'], v:none, bold_underline)
 
 HlSet('CursorLine', v:none, colors.cursorlinebg)
 HlLinks(['ColorColumn', 'CursorColumn', 'CocMenuSel'], 'CursorLine')
@@ -340,11 +340,11 @@ HlLinks(
     'Directory'
 )
 
-HlSet('DiffAdd', v:none, '#2b4018')
-HlSet('DiffChange', v:none, '#263840')
-HlSet('DiffDelete', '#1a1a1a', '#4d2f2b')
-HlSet('DiffText', v:none, '#453b24')
-HlSet('NonText', '#47423d')
+HlSet('DiffAdd', v:none, ['#2b4018'])
+HlSet('DiffChange', v:none, ['#263840'])
+HlSet('DiffDelete', ['#1a1a1a'], ['#4d2f2b'])
+HlSet('DiffText', v:none, ['#453b24'])
+HlSet('NonText', ['#47423d'])
 HlLinks(
     [
         'EndOfBuffer',
@@ -359,12 +359,12 @@ HlSet('ErrorMsg', colors.red, v:none, bold)
 HlLinks(['CocGitRemovedSign', 'CocGitTopRemovedSign'], 'ErrorMsg')
 
 HlSet('VertSplit', v:none, colors.black)
-HlSet('Folded', colors.gray, '#2b2927')
+HlSet('Folded', colors.gray, ['#2b2927'])
 HlLinks(['FoldColumn'], 'Folded')
-HlSet('IncSearch', '#4780f1', v:none, bold_underline)
+HlSet('IncSearch', ['#4780f1'], v:none, bold_underline)
 HlSet('CursorLineNr', colors.yellow, colors.cursorlinebg)
-HlSet('MatchParen', '#eb3a75', v:none, bold)
-HlSet('ModeMsg', '#93b329', v:none, bold)
+HlSet('MatchParen', ['#eb3a75'], v:none, bold)
+HlSet('ModeMsg', ['#93b329'], v:none, bold)
 HlSet('MoreMsg', colors.yellow, v:none, bold)
 HlLinks(
     [
@@ -419,49 +419,49 @@ HlSet('PmenuSel', colors.visual, colors.blue, bold)
 HlSet('Visual', v:none, colors.visual)
 HlLinks(['PmenuSbar', 'VisualNOS'], 'Visual')
 HlSet('PmenuThumb', v:none, colors.graish)
-HlSet('QuickFixLine', v:none, '#37322d')
-HlSet('Search', '#1eb81e', v:none, bold_underline)
+HlSet('QuickFixLine', v:none, ['#37322d'])
+HlSet('Search', ['#1eb81e'], v:none, bold_underline)
 HlSet('SpellBad', v:none, v:none, underline, colors.redish)
-HlSet('SpellCap', v:none, v:none, underline, '#a0b82e')
+HlSet('SpellCap', v:none, v:none, underline, ['#a0b82e'])
 HlLinks(['SpellLocal', 'SpellRare'], 'SpellCap')
-HlSet('StatusLine', '#797065', colors.black)
-HlSet('StatusLineNC', '#493c36', colors.black)
+HlSet('StatusLine', ['#797065'], colors.black)
+HlSet('StatusLineNC', ['#493c36'], colors.black)
 HlLinks(['CocListPath'], 'StatusLineNC')
 HlSet('StatusLineTerm', colors.green, colors.black, bold)
-HlSet('StatusLineTermNC', '#5f6e24', colors.black)
+HlSet('StatusLineTermNC', ['#5f6e24'], colors.black)
 HlSet('TabLine', colors.graish, colors.black)
 HlLinks(['TabLineFill'], 'Tabline')
-HlSet('TabLineSel', '#74853c', colors.black, bold)
-HlSet('Terminal', colors.normal, '#1d1f17')
-HlSet('Title', '#855c79', v:none, bold)
+HlSet('TabLineSel', ['#74853c'], colors.black, bold)
+HlSet('Terminal', colors.normal, ['#1d1f17'])
+HlSet('Title', ['#855c79'], v:none, bold)
 HlSet('WildMenu', colors.blue, colors.visual, bold)
 
-HlSet('User1', '#628c4c', colors.black)
-HlSet('User2', '#70655c', colors.black, underline, colors.redish)
-HlSet('User3', '#a59543', colors.black)
-HlSet('User4', '#466d87', colors.black)
-HlSet('User5', '#87517f', colors.black)
-HlSet('User6', '#964b44', colors.black)
-HlSet('User7', '#ca4141', colors.black, bold)
-HlSet('HighlightedyankRegion', v:none, '#363d45')
+HlSet('User1', ['#628c4c'], colors.black)
+HlSet('User2', ['#70655c'], colors.black, underline, colors.redish)
+HlSet('User3', ['#a59543'], colors.black)
+HlSet('User4', ['#466d87'], colors.black)
+HlSet('User5', ['#87517f'], colors.black)
+HlSet('User6', ['#964b44'], colors.black)
+HlSet('User7', ['#ca4141'], colors.black, bold)
+HlSet('HighlightedyankRegion', v:none, ['#363d45'])
 
 HlSet('SignColumn')
 HlSet('qfError')
 HlSet('qfFileName')
 
-HlSet('CocHoverRange', v:none, '#2f3829')
+HlSet('CocHoverRange', v:none, ['#2f3829'])
 HlLinks(['CocCursorRange'], 'CocHoverRange')
-HlSet('CocFloating', v:none, '#21261d')
-HlSet('CocNotification', v:none, '#1d2326')
-HlSet('CocListMode', '#748c20', colors.black, bold)
-HlSet('CocErrorHighlight', v:none, v:none, underline, '#d33e2a')
-HlSet('CocWarningHighlight', v:none, v:none, underline, '#dea91d')
-HlSet('CocInfoHighlight', v:none, v:none, underline, '#9dcc1f')
-HlSet('CocHintHighlight', v:none, v:none, underline, '#50bf7b')
-HlSet('CocGitChangedSign', v:none, v:none, bold, '#70a17c')
+HlSet('CocFloating', v:none, ['#21261d'])
+HlSet('CocNotification', v:none, ['#1d2326'])
+HlSet('CocListMode', ['#748c20'], colors.black, bold)
+HlSet('CocErrorHighlight', v:none, v:none, underline, ['#d33e2a'])
+HlSet('CocWarningHighlight', v:none, v:none, underline, ['#dea91d'])
+HlSet('CocInfoHighlight', v:none, v:none, underline, ['#9dcc1f'])
+HlSet('CocHintHighlight', v:none, v:none, underline, ['#50bf7b'])
+HlSet('CocGitChangedSign', v:none, v:none, bold, ['#70a17c'])
 HlLinks(['CocGitChangeRemovedSign'], 'CocGitChangedSign')
 
-HlSet('debugPC', v:none, '#0f1317')
+HlSet('debugPC', v:none, ['#0f1317'])
 HlSet('debugBreakpoint', colors.red, v:none, { reverse: 1, bold: 1 })
 HlLinks(
     [
@@ -472,13 +472,13 @@ HlLinks(
 )
 
 HlSet('htmlLink', colors.bright, v:none, underline)
-HlSet('htmlBold', 'fg', v:none, bold)
-HlSet('htmlBoldUnderline', 'fg', v:none, bold_underline)
-HlSet('htmlBoldItalic', 'fg', v:none, { bold: 1, italic: 1 })
-HlSet('htmlBoldUnderlineItalic', 'fg', v:none, { bold: 1, underline: 1, italic: 1 })
-HlSet('htmlUnderline', 'fg', v:none, underline)
-HlSet('htmlUnderlineItalic', 'fg', v:none, { underline: 1, italic: 1 })
-HlSet('htmlItalic', 'fg', v:none, italic)
+HlSet('htmlBold', ['fg'], v:none, bold)
+HlSet('htmlBoldUnderline', ['fg'], v:none, bold_underline)
+HlSet('htmlBoldItalic', ['fg'], v:none, { bold: 1, italic: 1 })
+HlSet('htmlBoldUnderlineItalic', ['fg'], v:none, { bold: 1, underline: 1, italic: 1 })
+HlSet('htmlUnderline', ['fg'], v:none, underline)
+HlSet('htmlUnderlineItalic', ['fg'], v:none, { underline: 1, italic: 1 })
+HlSet('htmlItalic', ['fg'], v:none, italic)
 
 HlSet('vimCommentTitle', colors.bright, v:none, bold)
 HlLinks(['vimSubst'], 'vimFuncName')
