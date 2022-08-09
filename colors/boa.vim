@@ -6,24 +6,24 @@ syntax reset
 g:colors_name = 'boa'
 
 const colors = {
+  norm_back: ['#110e0d', '0'],
   red: ['#d35b4b', '1'],
-  redish: ['#e62922', '160'],
   green: ['#8f9e44', '2'],
-  yellow: ['#caa247', '11'],
-  blue: ['#919697', '246'],
+  orange: ['#c57c41', '3'],
   darkblue: ['#898fac', '4'],
   purple: ['#b2809f', '5'],
   aqua: ['#70a17c', '6'],
-  orange: ['#c57c41', '3'],
+  normal: ['#b8af96', '7'],
+  yellow: ['#caa247', '11'],
+  redish: ['#e62922', '160'],
+  blue: ['#919697', '246'],
   gray: ['#80684f', '95'],
   brown: ['#826a33', '101'],
   cursorlinebg: ['#292523', '235'],
-  black: ['#0a0707', '232'],
-  normal: ['#b8af96', '7'],
+  black: ['#000000', '16'],
   visual: ['#3d3834', '236'],
   graish: ['#7c6f64', '242'],
   bright: ['#a89984', '144'],
-  norm_back: ['#110e0d', '0'],
 }
 
 g:terminal_ansi_colors = [
@@ -64,6 +64,44 @@ def HlLinks(names: list<string>, linksto: string)
   endfor
   hlset(links)
 enddef
+
+# HlSet('Normal', colors.normal, colors.norm_back)
+HlLinks(
+    [
+        'CocOutlineName',
+        'htmlTagN',
+        'vimFuncSID',
+        'vimSetSep',
+        'vimSep',
+        'vimContinue',
+        'vimVar',
+        'pythonDot',
+        'cssVendor',
+        'javaScriptBraces',
+        'javaScriptParens',
+        'jsGlobalNodeObjects',
+        'jsGlobalObjects',
+        'jsFuncParens',
+        'jsParens',
+        'typeScriptBraces',
+        'typeScriptEndColons',
+        'typeScriptDOMObjects',
+        'typeScriptAjaxMethods',
+        'typeScriptLogicSymbols',
+        'typeScriptGlobalObjects',
+        'typeScriptParens',
+        'typeScriptOpSymbols',
+        'typeScriptHtmlElemProperties',
+        'markdownUrlDelimiter',
+        'markdownLinkDelimiter',
+        'markdownLinkTextDelimiter',
+        'haskellSeparator',
+        'haskellDelimiter',
+        'jsonBraces',
+        'jsonString',
+    ],
+    'Normal'
+)
 
 # :help group-name
 # :help highlight-default
@@ -377,44 +415,6 @@ HlLinks(
     'MoreMsg'
 )
 
-HlSet('Normal', colors.normal, v:none)
-HlLinks(
-    [
-        'CocOutlineName',
-        'htmlTagN',
-        'vimFuncSID',
-        'vimSetSep',
-        'vimSep',
-        'vimContinue',
-        'vimVar',
-        'pythonDot',
-        'cssVendor',
-        'javaScriptBraces',
-        'javaScriptParens',
-        'jsGlobalNodeObjects',
-        'jsGlobalObjects',
-        'jsFuncParens',
-        'jsParens',
-        'typeScriptBraces',
-        'typeScriptEndColons',
-        'typeScriptDOMObjects',
-        'typeScriptAjaxMethods',
-        'typeScriptLogicSymbols',
-        'typeScriptGlobalObjects',
-        'typeScriptParens',
-        'typeScriptOpSymbols',
-        'typeScriptHtmlElemProperties',
-        'markdownUrlDelimiter',
-        'markdownLinkDelimiter',
-        'markdownLinkTextDelimiter',
-        'haskellSeparator',
-        'haskellDelimiter',
-        'jsonBraces',
-        'jsonString',
-    ],
-    'Normal'
-)
-
 HlSet('Pmenu', colors.normal, colors.visual)
 HlSet('PmenuSel', colors.visual, colors.blue, bold)
 HlSet('Visual', v:none, colors.visual)
@@ -481,6 +481,7 @@ HlSet('htmlUnderline', colors.normal, v:none, underline)
 HlSet('htmlUnderlineItalic', colors.normal, v:none, { underline: 1, italic: 1 })
 HlSet('htmlItalic', colors.normal, v:none, italic)
 
+
 HlSet('vimCommentTitle', colors.bright, v:none, bold)
 HlLinks(['vimSubst'], 'vimFuncName')
 HlLinks(['vimCommentString'], 'vimComment')
@@ -489,5 +490,17 @@ HlSet('typeScriptDocTags', colors.bright, v:none, bold)
 HlSet('markdownItalic', colors.normal, v:none, italic)
 HlSet('markdownLinkText', colors.gray, v:none, underline)
 HlLinks(['markdownIdDeclaration'], 'markdownLinkText')
+
+HlSet('StargateFocus', ['#958c6a', '101'])
+HlSet('StargateDesaturate', ['#49423f', '238'])
+HlSet('StargateError', colors.red)
+HlSet('StargateLabels', colors.yellow, ['#171e2c', '234'])
+HlSet('StargateErrorLabels', colors.yellow, ['#551414', '52'])
+HlSet('StargateMain', ['#f2119c', '198'], v:none, bold)
+HlSet('StargateSecondary', ['#11eb9c', '42'], v:none, bold)
+HlSet('StargateShip', ['#111111', '233'], colors.yellow)
+HlSet('StargateVIM9000', ['#111111', '233'], colors.purple, bold)
+HlSet('StargateMessage', ['#a5b844', '143'])
+HlSet('StargateErrorMessage', ['#e36659', '167'])
 
 # vim: set tw=80 fdm=marker:
