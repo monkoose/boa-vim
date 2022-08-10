@@ -26,24 +26,24 @@ const colors = {
   bright: ['#a89984', '144'],
 }
 
-g:terminal_ansi_colors = [
-  '#110e0d',
-  colors.red[0],
-  colors.green[0],
-  colors.orange[0],
-  '#7680ac',
-  colors.purple[0],
-  '#70a195',
-  '#8c8572',
-  '#6e685a',
-  colors.red[0],
-  colors.green[0],
-  colors.yellow[0],
-  '#7680ac',
-  colors.purple[0],
-  '#70a195',
-  colors.normal[0]
-]
+# g:terminal_ansi_colors = [
+#   '#110e0d',
+#   colors.red[0],
+#   colors.green[0],
+#   colors.orange[0],
+#   '#7680ac',
+#   colors.purple[0],
+#   '#70a195',
+#   '#8c8572',
+#   '#6e685a',
+#   colors.red[0],
+#   colors.green[0],
+#   colors.yellow[0],
+#   '#7680ac',
+#   colors.purple[0],
+#   '#70a195',
+#   colors.normal[0]
+# ]
 
 const bold = { bold: 1 }
 const italic = { italic: 1 }
@@ -364,10 +364,10 @@ HlSet('Error', colors.red, v:none, bold_underline)
 HlSet('Todo', colors.normal, v:none, bold_underline)
 
 HlSet('CursorLine', v:none, colors.cursorlinebg)
-HlLinks(['ColorColumn', 'CursorColumn', 'CocMenuSel'], 'CursorLine')
+HlLinks(['ColorColumn', 'CursorColumn'], 'CursorLine')
 
-HlSet('Cursor', v:none, v:none, { inverse: 1 })
-HlLinks(['lCursor', 'CursorIM'], 'Cursor')
+# HlSet('Cursor', v:none, v:none, { inverse: 1 })
+# HlLinks(['lCursor', 'CursorIM'], 'Cursor')
 
 HlSet('Directory', colors.green, v:none, bold)
 HlLinks(
@@ -415,6 +415,7 @@ HlLinks(
     'MoreMsg'
 )
 
+HlSet('CocMenuSel', v:none, colors.visual)
 HlSet('Pmenu', colors.normal, colors.visual)
 HlSet('PmenuSel', colors.visual, colors.blue, bold)
 HlSet('Visual', v:none, colors.visual)
@@ -433,7 +434,7 @@ HlSet('StatusLineTermNC', ['#5f6e24', '59'], colors.black)
 HlSet('TabLine', colors.graish, colors.black)
 HlLinks(['TabLineFill'], 'Tabline')
 HlSet('TabLineSel', ['#74853c', '101'], colors.black, bold)
-HlSet('Terminal', colors.normal, ['#1d1f17', '234'])
+# HlSet('Terminal', colors.normal, colors)
 HlSet('Title', ['#855c79', '96'], v:none, bold)
 HlSet('WildMenu', colors.blue, colors.visual, bold)
 
@@ -452,7 +453,7 @@ HlSet('qfFileName')
 
 HlSet('CocHoverRange', v:none, ['#2f3829', '237'])
 HlLinks(['CocCursorRange'], 'CocHoverRange')
-HlSet('CocFloating', v:none, ['#21261d', '235'])
+HlSet('CocFloating', v:none, ['#21261d', '234'])
 HlSet('CocNotification', v:none, ['#1d2326', '234'])
 HlSet('CocListMode', ['#748c20', '100'], colors.black, bold)
 HlSet('CocErrorHighlight', v:none, v:none, underline, ['#d33e2a', '167'])
