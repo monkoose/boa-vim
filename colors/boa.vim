@@ -334,8 +334,8 @@ HlLinks('CursorLine', [
   ]
 )
 
-# HlSet('Cursor', v:none, v:none, { inverse: 1 })
-# HlLinks('Cursor', ['lCursor', 'CursorIM'])
+HlSet('Cursor', colors.norm_back, '231')
+HlLinks('Cursor', ['lCursor', 'CursorIM'])
 
 HlSet('Directory', colors.green, v:none, bold)
 HlLinks('Directory', [
