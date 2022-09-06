@@ -464,5 +464,6 @@ HlSet('StargateShip', '233', colors.yellow)
 HlSet('StargateVIM9000', '233', colors.purple, bold)
 HlSet('StargateMessage', '143')
 HlSet('StargateErrorMessage', '167')
+HlSet('StargateVisual', v:none, '235')
 
 # vim: set tw=80 fdm=marker:
