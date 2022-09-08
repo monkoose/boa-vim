@@ -378,7 +378,7 @@ HlLinks('MoreMsg', [
   ]
 )
 
-HlSet('CocMenuSel', v:none, colors.visual)
+HlSet('CocMenuSel', v:none, '235')
 HlSet('Pmenu', colors.normal, colors.visual)
 HlSet('PmenuSel', colors.visual, colors.blue, bold)
 HlSet('Visual', v:none, colors.visual)
