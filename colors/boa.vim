@@ -19,7 +19,7 @@ const colors = {
   normal: '7',
   yellow: '11',
   redish: '160',
-  blue: '246',
+  blue: '65',
   gray: '95',
   brown: '101',
   cursorlinebg: '235',
@@ -346,10 +346,10 @@ HlLinks('Directory', [
   ]
 )
 
-HlSet('DiffAdd', v:none, '71')
-HlSet('DiffChange', v:none, '66')
-HlSet('DiffDelete', '234', '96')
-HlSet('DiffText', v:none, '59')
+HlSet('DiffAdd', '232', '58')
+HlSet('DiffChange', '232', '23')
+HlSet('DiffDelete', '232', '52')
+HlLinks('DiffAdd', ['DiffText'])
 
 HlSet('NonText', '238')
 HlLinks('NonText', [
@@ -379,9 +379,8 @@ HlLinks('MoreMsg', [
   ]
 )
 
-HlSet('CocMenuSel', v:none, '235', bold)
-HlSet('Pmenu', colors.normal, colors.visual)
-HlSet('PmenuSel', colors.visual, colors.blue, bold)
+HlSet('Pmenu', v:none, '234')
+HlSet('PmenuSel', v:none, '235', bold)
 HlSet('Visual', v:none, colors.visual)
 HlLinks('Visual', ['PmenuSbar', 'VisualNOS'])
 HlSet('PmenuThumb', v:none, colors.graish)
@@ -403,7 +402,7 @@ HlSet('Title', '96', v:none, bold)
 HlSet('WildMenu', colors.blue, colors.visual, bold)
 
 HlSet('User1', '65', colors.black)
-HlSet('User2', '101', colors.black, underline, colors.redish)
+HlSet('User2', '47', colors.black, bold)
 HlSet('User3', '137', colors.black)
 HlSet('User4', '60', colors.black)
 HlSet('User5', '96', colors.black)
@@ -416,8 +415,8 @@ HlSet('qfFileName')
 
 HlSet('CocHoverRange', v:none, '237')
 HlLinks('CocHoverRange', ['CocCursorRange'])
-HlSet('CocFloating', v:none, '234')
-HlSet('CocNotification', v:none, '234')
+HlLinks('Pmenu', ['CocFloating', 'CocNotification'])
+HlLinks('PmenuSel', ['CocMenuSel'])
 HlSet('CocListMode', '100', colors.black, bold)
 HlSet('CocErrorHighlight', v:none, v:none, underline, '167')
 HlSet('CocWarningHighlight', v:none, v:none, underline, '178')
