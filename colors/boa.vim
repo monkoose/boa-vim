@@ -179,6 +179,7 @@ HlLinks('Function', [
   'pythonDottedName',
   'luaFuncCall',
   'haskellIdentifier',
+  'lispFunc',
   ]
 )
 
@@ -433,6 +434,8 @@ HlLinks('htmlTagName', [
   ]
 )
 
+HlSet('lispParen', '240')
+
 HlSet('htmlLink', colors.bright, v:none, underline)
 HlSet('htmlBold', colors.normal, v:none, bold)
 HlSet('htmlBoldUnderline', colors.normal, v:none, bold_underline)
@@ -441,7 +444,6 @@ HlSet('htmlBoldUnderlineItalic', colors.normal, v:none, { bold: 1, underline: 1,
 HlSet('htmlUnderline', colors.normal, v:none, underline)
 HlSet('htmlUnderlineItalic', colors.normal, v:none, { underline: 1, italic: 1 })
 HlSet('htmlItalic', colors.normal, v:none, italic)
-
 
 HlSet('vimCommentTitle', colors.bright, v:none, bold)
 HlLinks('vimFuncName', ['vimSubst'])
