@@ -1,11 +1,12 @@
 vim9script
 
+if &termguicolors || has('gui_running')
+  echoerr "boa colorscheme designed only for terminal. Set notermguicolors"
+endif
+
 set background=dark
 highlight clear
 g:colors_name = 'boa'
-if (has('termguicolors') && &termguicolors) || has('gui_running')
-  echoerr "boa colorscheme designed only for terminal. Set notermguicolors"
-endif
 
 const colors = {
   norm_back: '0',
@@ -378,7 +379,7 @@ HlLinks('MoreMsg', [
   ]
 )
 
-HlSet('CocMenuSel', v:none, '235')
+HlSet('CocMenuSel', v:none, '235', bold)
 HlSet('Pmenu', colors.normal, colors.visual)
 HlSet('PmenuSel', colors.visual, colors.blue, bold)
 HlSet('Visual', v:none, colors.visual)
@@ -408,7 +409,6 @@ HlSet('User4', '60', colors.black)
 HlSet('User5', '96', colors.black)
 HlSet('User6', '95', colors.black)
 HlSet('User7', '167', colors.black, bold)
-HlSet('HighlightedyankRegion', v:none, '237')
 
 HlSet('SignColumn')
 HlSet('qfError')
