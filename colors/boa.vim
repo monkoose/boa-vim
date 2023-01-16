@@ -334,6 +334,7 @@ HlSet('CursorLine', v:none, colors.cursorlinebg)
 HlLinks('CursorLine', [
   'ColorColumn',
   'CursorColumn',
+  'QuickFixLine',
   ]
 )
 
@@ -386,7 +387,6 @@ HlSet('PmenuSel', v:none, '235', bold)
 HlSet('Visual', v:none, colors.visual)
 HlLinks('Visual', ['PmenuSbar', 'VisualNOS'])
 HlSet('PmenuThumb', v:none, colors.graish)
-HlSet('QuickFixLine', v:none, '237')
 HlSet('Search', '34', v:none, bold_underline)
 HlSet('SpellBad', v:none, v:none, underline, colors.redish)
 HlSet('SpellCap', v:none, v:none, underline, '143')
