@@ -171,6 +171,7 @@ HlLinks('Identifier', [
   'cssSelectorOp2',
   'javaScriptMember',
   'goDeclType',
+  'CocPumMenu',
   ],
 )
 
@@ -413,6 +414,14 @@ HlSet('User7', '167', colors.black, bold)
 HlSet('SignColumn')
 HlSet('qfError')
 HlSet('qfFileName')
+HlSet('PopupBorder', '71')
+
+HlSet('ALEError', v:none, v:none, underline, '167')
+HlSet('ALEWarning', v:none, v:none, underline, '178')
+HlSet('ALEInfo', v:none, v:none, underline, '112')
+HlSet('AleErrorSign', colors.red, v:none, bold)
+HlSet('AleWarningSign', colors.orange, v:none, bold)
+HlSet('AleInfoSign', colors.green, v:none, bold)
 
 HlSet('CocHoverRange', v:none, '237')
 HlLinks('CocHoverRange', ['CocCursorRange'])
@@ -425,6 +434,7 @@ HlSet('CocInfoHighlight', v:none, v:none, underline, '112')
 HlSet('CocHintHighlight', v:none, v:none, underline, '77')
 HlSet('CocGitChangedSign', v:none, v:none, bold, '71')
 HlLinks('CocGitChangedSign', ['CocGitChangeRemovedSign'])
+HlSet('CocPumSearch', v:none, v:none, underline)
 
 HlSet('debugPC', v:none, '23')
 HlSet('debugBreakpoint', colors.red, v:none, { reverse: 1, bold: 1 })
