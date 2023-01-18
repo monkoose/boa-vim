@@ -371,7 +371,7 @@ HlSet('Folded', colors.gray, '235')
 HlLinks('Folded', ['FoldColumn'])
 HlSet('IncSearch', '69', v:none, bold_underline)
 HlSet('CursorLineNr', colors.yellow, colors.cursorlinebg)
-HlSet('MatchParen', '168', v:none, bold)
+HlSet('MatchParen', '201', v:none, bold)
 HlSet('ModeMsg', '107', v:none, bold)
 HlSet('MoreMsg', colors.yellow, v:none, bold)
 HlLinks('MoreMsg', [
