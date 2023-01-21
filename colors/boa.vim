@@ -181,6 +181,7 @@ HlLinks('Function', [
   'luaFuncCall',
   'haskellIdentifier',
   'lispFunc',
+  'vim9FuncCallUser',
   ]
 )
 
@@ -366,7 +367,7 @@ HlLinks('NonText', [
 HlSet('ErrorMsg', colors.red, v:none, bold)
 HlLinks('ErrorMsg', ['CocGitRemovedSign', 'CocGitTopRemovedSign'])
 
-HlSet('VertSplit', v:none, colors.black)
+HlSet('VertSplit', colors.black)
 HlSet('Folded', colors.gray, '235')
 HlLinks('Folded', ['FoldColumn'])
 HlSet('IncSearch', '69', v:none, bold_underline)
